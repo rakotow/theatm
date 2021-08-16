@@ -1,0 +1,52 @@
+attempt = 0
+userpin = 0
+balance = 100
+print('Weilcome')
+
+while attempt != 3: 
+    inputpin= int(input('Enter pin: '))
+    if userpin == inputpin:
+        choice = input('Type 1 : cashout \nType 2 : Show Balance \nType 3 : Add fund\n Enter answer: ')
+        while True:
+            if choice == '1':
+                print('Cashout')
+                moneycash = int(input(" How much would you like to cashout:  "))
+                new_amount = balance - moneycash
+                print('You cashout', moneycash, "Your new balance is : ", new_amount)
+                break
+            elif choice == '2':
+                print(f'Your balance is {balance} ')
+                break
+            elif choice == '3':
+                print('Adding fund')
+                break
+            else:
+                print(input('Type 1 : cashout \nType 2 : Show Balance \nType 3 : Add fund\n Enter answer: '))
+               
+        break
+        
+    else:
+        print("wronf pin")
+        attempt += 1
+        continue
+    
+
+    
+    #Option to go back to menu or quit    
+    while True:
+        main_menu = input('What would you like to do \n Please choose one of the option: \n Type Q for Quit \n Type C to continue')
+        if  main_menu == 'C':
+            print("Let's go back to the menu")
+            break
+            
+        if main_menu == 'Q':
+            print('See you')
+            break
+        else:
+            print("I didn't understand")
+            continue    
+                   
+    break 
+
+print('Tahnk you for you support')
+
